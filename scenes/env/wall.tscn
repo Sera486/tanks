@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ciw67k85m4hvx"]
+
+[ext_resource type="Texture2D" uid="uid://iuitqhntwxl1" path="res://assets/env/env_sprites.png" id="1_51iyf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pr57"]
+atlas = ExtResource("1_51iyf")
+region = Rect2(34, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih55m"]
+size = Vector2(16, 16)
+
+[node name="Wall" type="Area2D" unique_id=1653192845]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1581966819]
+position = Vector2(8, 8)
+texture = SubResource("AtlasTexture_7pr57")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=566294644]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_ih55m")

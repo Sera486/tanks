@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://gntd5oom6rx1"]
+
+[ext_resource type="Script" uid="uid://ctebij8dgiy5m" path="res://scenes/shell/shell.gd" id="1_et0og"]
+[ext_resource type="Texture2D" uid="uid://brha153nq3xun" path="res://assets/shell/tank_shell.png" id="2_6rs1g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2724"]
+radius = 8.0
+
+[node name="Shell" type="Area2D" unique_id=861757754]
+script = ExtResource("1_et0og")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1021668633]
+shape = SubResource("CapsuleShape2D_h2724")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=584188643]
+texture = ExtResource("2_6rs1g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
