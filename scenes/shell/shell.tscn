@@ -4,10 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://brha153nq3xun" path="res://assets/shell/tank_shell.png" id="2_6rs1g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2724"]
-radius = 8.0
+radius = 6.0
+height = 20.0
 
 [node name="Shell" type="Area2D" unique_id=861757754]
 script = ExtResource("1_et0og")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1021668633]
 shape = SubResource("CapsuleShape2D_h2724")
