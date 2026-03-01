@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://5es7076m5rct" path="res://scenes/tank/tank.gd" id="1_0el1g"]
 [ext_resource type="Texture2D" uid="uid://bfj5skppqx154" path="res://assets/tank/hull.png" id="1_x633a"]
 [ext_resource type="Texture2D" uid="uid://hov7pj720heg" path="res://assets/tank/turret.png" id="2_0el1g"]
+[ext_resource type="PackedScene" uid="uid://gntd5oom6rx1" path="res://scenes/shell/shell.tscn" id="2_83kth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83kth"]
 size = Vector2(118, 96)
 
 [node name="Tank" type="CharacterBody2D" unique_id=1708021583]
 script = ExtResource("1_0el1g")
+shell_scene = ExtResource("2_83kth")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508680029]
@@ -20,3 +22,7 @@ texture = ExtResource("1_x633a")
 [node name="TurretSprite2D2" type="Sprite2D" parent="." unique_id=1049057082]
 rotation = -1.5707964
 texture = ExtResource("2_0el1g")
+
+[node name="Marker2D" type="Marker2D" parent="TurretSprite2D2" unique_id=205716775]
+position = Vector2(65, 2.8412403e-06)
+rotation = 1.5707964
