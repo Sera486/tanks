@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="serademon"
-run/main_scene="uid://bcab1ymvw422j"
+run/main_scene="uid://coqqemxboc77y"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,7 @@ Lobby="*uid://dfsb0hvt4nfw3"
 
 window/size/viewport_width=608
 window/size/viewport_height=608
+window/stretch/mode="canvas_items"
 
 [editor]
 

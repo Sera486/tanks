@@ -3,8 +3,8 @@ extends Node
 # Autoload named Lobby
 
 # These signals can be connected to by a UI lobby scene or the game scene.
-signal player_connected(peer_id, player_info)
-signal player_disconnected(peer_id)
+signal player_connected(peer_id: int, player_info)
+signal player_disconnected(peer_id: int)
 signal server_disconnected
 
 const PORT = 31337
@@ -13,13 +13,13 @@ const MAX_CONNECTIONS = 4
 
 # This will contain player info for every player,
 # with the keys being each player's unique IDs.
-var players = {}
+var players: Dictionary = {}
 
 # This is the local player info. This should be modified locally
 # before the connection is made. It will be passed to every other peer.
 # For example, the value of "name" can be set to something the player
 # entered in a UI scene.
-var player_info = {"name": "Name"}
+var player_info = {"name": "Server"}
 
 var players_loaded = 0
 
@@ -70,6 +70,7 @@ func load_game(game_scene_path):
 func player_loaded():
 	if multiplayer.is_server():
 		players_loaded += 1
+		push_warning('players loaded: %s' % players_loaded)
 		if players_loaded == players.size():
 			$/root/Game.start_game()
 			players_loaded = 0

@@ -9,7 +9,6 @@ func _ready() -> void:
 	pass
 	
 func _on_join_button_down()->void:
-	var address := server_ip.text
 	Lobby.player_info.name = player_name.text;
 	Lobby.join_game(server_ip.text)
 	pass

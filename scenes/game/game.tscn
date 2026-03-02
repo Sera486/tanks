@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1pcsjghhjhtg"]
+
+[ext_resource type="Script" uid="uid://b6hspqr8m33sa" path="res://scenes/game/game.gd" id="1_7h61r"]
+[ext_resource type="PackedScene" uid="uid://bcab1ymvw422j" path="res://scenes/env/env.tscn" id="1_sul5r"]
+[ext_resource type="PackedScene" uid="uid://cu6dy823ill4i" path="res://scenes/tank/tank.tscn" id="2_0sr1o"]
+
+[node name="Game" type="Node2D" unique_id=2033544552]
+script = ExtResource("1_7h61r")
+tank_scene = ExtResource("2_0sr1o")
+
+[node name="Test" parent="." unique_id=172249365 instance=ExtResource("1_sul5r")]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=324475660]
+spawn_path = NodePath(".")
