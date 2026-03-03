@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var shell_scene: PackedScene 
 
 const SPEED: float = 200.0
-const ROTATION_SPEED: float = 10.0
+const ROTATION_SPEED: float = 5.0
 
 func _enter_tree() -> void:
 	$InputSynchronizer.set_multiplayer_authority(name.to_int())
@@ -26,14 +26,17 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		shoot(get_global_mouse_position())
+		var coords := get_global_mouse_position()
+		shoot(coords)
 	
 func shoot(coords: Vector2):
 	var shell := shell_scene.instantiate(PackedScene.GEN_EDIT_STATE_DISABLED)
-	#shell.position = shell_spawn.position
+	shell.global_position = shell_spawn.global_position
+	shell.rotation = turret.rotation
+	shell.scale = scale
 	shell.set_destination(coords)
-	shell_spawn.add_child(shell)
+	get_tree().root.add_child(shell)
 
 func get_shot(bullet: Node2D):
-	#bullet.queue_free()
 	print("you've been hit")
+	queue_free()

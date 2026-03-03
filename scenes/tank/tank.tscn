@@ -47,9 +47,9 @@ shape = SubResource("RectangleShape2D_83kth")
 texture = ExtResource("1_x633a")
 
 [node name="TurretSprite2D2" type="Sprite2D" parent="." unique_id=1049057082]
-rotation = -1.5707964
 texture = ExtResource("2_0el1g")
+metadata/_edit_group_ = true
 
 [node name="Marker2D" type="Marker2D" parent="TurretSprite2D2" unique_id=205716775]
 position = Vector2(65, 2.8412403e-06)
-rotation = 1.5707964
+gizmo_extents = 0.0
