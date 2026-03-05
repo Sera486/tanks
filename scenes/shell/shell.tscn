@@ -12,9 +12,11 @@ script = ExtResource("1_et0og")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1021668633]
+scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_h2724")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=584188643]
+scale = Vector2(2, 2)
 texture = ExtResource("2_6rs1g")
 
 [node name="Timer" type="Timer" parent="." unique_id=1951418409]

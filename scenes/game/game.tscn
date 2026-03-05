@@ -9,6 +9,7 @@ script = ExtResource("1_7h61r")
 tank_scene = ExtResource("2_0sr1o")
 
 [node name="Test" parent="." unique_id=172249365 instance=ExtResource("1_sul5r")]
+spawn_points = Array[Vector2i]([Vector2i(2, 2), Vector2i(2, 12), Vector2i(12, 2), Vector2i(12, 12)])
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=324475660]
 spawn_path = NodePath(".")

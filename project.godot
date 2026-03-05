@@ -21,9 +21,9 @@ Lobby="*uid://dfsb0hvt4nfw3"
 
 [display]
 
-window/size/viewport_width=240
-window/size/viewport_height=240
+window/size/viewport_width=648
 window/stretch/mode="canvas_items"
+window/stretch/scale=2.7
 
 [editor]
 
