@@ -5,8 +5,6 @@ extends Node2D
 @onready var level: Env = $Test
 
 func _ready() -> void:
-	spawner.add_spawnable_scene("res://scenes/tank/tank.tscn")
-	push_warning('loaded')
 	Lobby.player_loaded.rpc()
 	pass
 
@@ -16,10 +14,9 @@ func start_game()-> void:
 	pass
 	
 func _spawn_players() -> void:
-	push_warning('spawn_players')
 	for id: int in Lobby.players:
 		var tank : Tank = tank_scene.instantiate() as Tank
 		tank.name = str(id)
-		spawner.add_child(tank, true);
+		add_child(tank, true);
 		tank.position = level.map_to_local(level.get_spawn_point())
 	pass

@@ -12,4 +12,5 @@ tank_scene = ExtResource("2_0sr1o")
 spawn_points = Array[Vector2i]([Vector2i(2, 2), Vector2i(2, 12), Vector2i(12, 2), Vector2i(12, 12)])
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=324475660]
-spawn_path = NodePath(".")
+_spawnable_scenes = PackedStringArray("uid://cu6dy823ill4i", "uid://gntd5oom6rx1")
+spawn_path = NodePath("..")
