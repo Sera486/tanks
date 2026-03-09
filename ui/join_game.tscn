@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bo5bkkc0kswhd"]
 
 [ext_resource type="Script" uid="uid://cpw5gu8kpgyu5" path="res://ui/join_game.gd" id="1_ju2tq"]
+[ext_resource type="PackedScene" uid="uid://di06qfri03hpk" path="res://ui/button.tscn" id="2_a4q6f"]
 
 [node name="Control" type="Control" unique_id=400805266]
 layout_mode = 3
@@ -52,7 +53,8 @@ drag_and_drop_selection_enabled = false
 tab_input_mode = false
 scroll_fit_content_height = true
 
-[node name="JoinButton" type="Button" parent="VBoxContainer" unique_id=1851487407]
+[node name="JoinButton" parent="VBoxContainer" unique_id=1735666930 instance=ExtResource("2_a4q6f")]
 layout_mode = 2
-text = "Join
-"
+text = "Join"
+
+[connection signal="pressed" from="VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]

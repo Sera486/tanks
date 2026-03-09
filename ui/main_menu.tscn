@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://coqqemxboc77y"]
 
 [ext_resource type="Script" uid="uid://dip0v867bg4tu" path="res://ui/main_menu.gd" id="1_t7e0r"]
+[ext_resource type="PackedScene" uid="uid://di06qfri03hpk" path="res://ui/button.tscn" id="3_wk0pr"]
 
 [node name="Control" type="Control" unique_id=400805266]
 layout_mode = 3
@@ -25,10 +26,13 @@ offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CreateGameButton" type="Button" parent="VBoxContainer" unique_id=1268292580]
+[node name="CreateGameButton" parent="VBoxContainer" unique_id=1735666930 instance=ExtResource("3_wk0pr")]
 layout_mode = 2
 text = "Create Game"
 
-[node name="JoinGameButton" type="Button" parent="VBoxContainer" unique_id=1758258602]
+[node name="JoinGameButton" parent="VBoxContainer" unique_id=1377306392 instance=ExtResource("3_wk0pr")]
 layout_mode = 2
 text = "Join Game"
+
+[connection signal="pressed" from="VBoxContainer/CreateGameButton" to="." method="_on_create_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/JoinGameButton" to="." method="_on_join_game_button_pressed"]

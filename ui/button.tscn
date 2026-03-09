@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://di06qfri03hpk"]
+
+[ext_resource type="AudioStream" uid="uid://dt83bp4o5cmgs" path="res://assets/menu/button_click.wav" id="1_7krdg"]
+[ext_resource type="Script" uid="uid://de8p0bukn6jh3" path="res://ui/button.gd" id="1_fxfmk"]
+[ext_resource type="AudioStream" uid="uid://bqbal7x3qqrc1" path="res://assets/menu/button_hover.wav" id="2_fxfmk"]
+
+[node name="Button" type="Button" unique_id=1735666930]
+script = ExtResource("1_fxfmk")
+click_sound = ExtResource("1_7krdg")
+hover_sound = ExtResource("2_fxfmk")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -4,12 +4,15 @@ extends Node2D
 @onready var spawner: MultiplayerSpawner = $MultiplayerSpawner
 @onready var level: Env = $Test
 
+@onready var bg_music: AudioStreamPlayer = $BgMusic
+
 func _ready() -> void:
 	Lobby.player_loaded.rpc()
 	pass
 
 #Called from lobby when all players are loaded
 func start_game()-> void:
+	bg_music.play()
 	_spawn_players()
 	pass
 	
