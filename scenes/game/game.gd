@@ -1,8 +1,10 @@
 extends Node2D
 
-@export var tank_scene : PackedScene
 @onready var spawner: MultiplayerSpawner = $MultiplayerSpawner
 @onready var level: Env = $Test
+
+@export var tank_scene : PackedScene
+@export var background_music: AudioStream
 
 func _ready() -> void:
 	Lobby.player_loaded.rpc()
@@ -10,6 +12,7 @@ func _ready() -> void:
 
 #Called from lobby when all players are loaded
 func start_game()-> void:
+	SoundManager.play_sfx(background_music)
 	_spawn_players()
 	pass
 	

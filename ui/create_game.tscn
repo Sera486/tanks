@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c8fl5bby41ifd"]
 
 [ext_resource type="Script" uid="uid://cevsj7f120fcg" path="res://ui/create_game.gd" id="1_pi4lm"]
+[ext_resource type="PackedScene" uid="uid://di06qfri03hpk" path="res://ui/button.tscn" id="2_ftgv6"]
 
 [node name="Control" type="Control" unique_id=400805266]
 layout_mode = 3
@@ -23,7 +24,8 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1851487407]
+[node name="StartButton" parent="VBoxContainer" unique_id=1735666930 instance=ExtResource("2_ftgv6")]
 layout_mode = 2
-text = "Start
-"
+text = "Start"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

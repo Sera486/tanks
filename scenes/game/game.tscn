@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://b6hspqr8m33sa" path="res://scenes/game/game.gd" id="1_7h61r"]
 [ext_resource type="PackedScene" uid="uid://bcab1ymvw422j" path="res://scenes/env/env.tscn" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://cu6dy823ill4i" path="res://scenes/tank/tank.tscn" id="2_0sr1o"]
+[ext_resource type="AudioStream" uid="uid://dsfw0ejgh0mj3" path="res://assets/game/background_music.mp3" id="4_kelw5"]
 
 [node name="Game" type="Node2D" unique_id=2033544552]
 script = ExtResource("1_7h61r")
 tank_scene = ExtResource("2_0sr1o")
+background_music = ExtResource("4_kelw5")
 
 [node name="Test" parent="." unique_id=172249365 instance=ExtResource("1_sul5r")]
 spawn_points = Array[Vector2i]([Vector2i(2, 2), Vector2i(2, 12), Vector2i(12, 2), Vector2i(12, 12)])
